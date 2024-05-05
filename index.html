@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <!--    <link rel="stylesheet" href="css/font-awesome.css">-->
+    <link rel="stylesheet" href="css/flipbook.style.css">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Главная</title>
 </head>
+
 
 <body class="m-page">
     <div class="wrapper">
@@ -65,13 +68,14 @@
                                 <p>Книга посвящена 100-летнему юбилею системы образования Республики Татарстан и представляет собой обзор некоторых наиболее значимых событий в период её становления и развития. Издание содержит уникальные, ранее не опубликованные материалы из фондов Музея народного образования Республики Татарстан о видных деятелях образования, учёных, ветеранах педагогического труда, династиях и выдающихся учителях Татарстана, чья деятельность и методическое наследие оказали значительное влияние на развитие образования и науки в республике. Подарочное издание предназначено для широкого круга читателей и особенно будет интересно представителям сферы образования и науки Республики Татарстан</p>
                             </div>
                             <div class="main__nav">
-                                <button class="main__btn m-btn m-btn-brown">
+                                <button class="main__btn m-btn m-btn-brown _show-book">
                                     <span>Читать книгу</span>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="book-pages m-section">
@@ -278,9 +282,25 @@
         </footer>
     </div>
 
+    <div class="book-reader">
+        <button class="_close-book book-reader__close m-btn m-btn-brown">
+            <span>Закрыть</span>
+        </button>
+        <div id="container"></div>
+    </div>
+    <script src="js/jquery.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>
 
+    <script src="js/flipbook.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#container").flipBook({
+                pdfUrl: "pdf/book.pdf",
+            });
+
+        })
+    </script>
 </body>
 
 </html>
